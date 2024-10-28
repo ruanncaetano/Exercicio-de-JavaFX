@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ruan.caetano.ex1.TelaPrincipalView">
+   <top>
+      <VBox prefHeight="55.0" prefWidth="800.0" style="-fx-background-color: gray;" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="_CADASTRO">
+                  <items>
+                    <MenuItem text="_Produto..." />
+                        <MenuItem text="_Categoria..." />
+                        <MenuItem text="_Tipos de Pagamento..." />
+                        <MenuItem onAction="#onCadEmpresa" text="_Empresa" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem onAction="#onFechar" text="_Fechar">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="F" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="_PEDIDO">
+                     <items>
+                        <MenuItem text="_Novo Pedido..." />
+                        <MenuItem text="_Abrir Pedido..." />
+                     </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="_RELATÓRIO">
+                  <items>
+                        <Menu text="_BASICO">
+                          <items>
+                            <MenuItem text="Ca_tegoria" />
+                              <MenuItem text="_Produto" />
+                              <MenuItem text="_Lista Produto" />
+                          </items>
+                        </Menu>
+                        <Menu text="_FINANCEIRO">
+                           <items>
+                              <MenuItem text="_Pediddos por Periodos" />
+                           </items>
+                        </Menu>
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="_AJUDA">
+                     <items>
+                        <MenuItem text="Ajuda do _Sistema" />
+                        <MenuItem text="_Sobre" />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
